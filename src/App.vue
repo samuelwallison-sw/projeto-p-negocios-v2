@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import Header from './components/Header.vue'
-<<<<<<< HEAD
 import Footer from './components/Footer.vue'
 import HomeView from './views/HomeView.vue'
 import MenuView from './views/MenuView.vue'
@@ -10,14 +9,6 @@ import NovidadesView from './views/NovidadesView.vue'
 import SobreView from './views/SobreView.vue'
 import SuporteView from './views/SuporteView.vue'
 import OrderStatusView from './views/OrderStatusView.vue'
-=======
-import HomeView from './Views/HomeView.vue'
-import MenuView from './Views/MenuView.vue'
-import CheckoutView from './Views/CheckoutView.vue'
-import NovidadesView from './Views/NovidadesView.vue'
-import SobreView from './Views/SobreView.vue'
-import SuporteView from './Views/SuporteView.vue'
->>>>>>> fa14b94c35a4b99dcc5652c82d869993e96738b1
 
 const currentTab = ref('home')
 const lastOrder = ref<any>(null)
@@ -27,7 +18,6 @@ const handleNavigate = (page: string) => {
 }
 
 const handleGoBack = () => {
-  // Retorna para a Home ao clicar no botão voltar do Header
   currentTab.value = 'home'
 }
 
@@ -92,7 +82,7 @@ const handleOrderConfirmed = (orderData: any) => {
   font-family: var(--font-body);
 }
 
-/* Aplica a fonte estilosa gordinha aos títulos */
+/* Aplica a fonte aos títulos */
 h1, h2, h3, .logo {
   font-family: var(--font-title);
   letter-spacing: 0.5px;
@@ -124,7 +114,7 @@ h1, h2, h3, .logo {
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex-grow: 1; /* Garante que o rodapé sempre fique no final da tela */
+  flex-grow: 1;
 }
 
 /* ESTADO: NENHUM PEDIDO AINDA */
